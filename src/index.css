@@ -1,0 +1,64 @@
+:root {
+  --felt-dark: #14342a;
+  --felt: #1f4d3d;
+  --felt-light: #276450;
+  --ivory: #f2ead8;
+  --ivory-dim: #e4d9bf;
+  --ink: #241a12;
+  --brass: #c9a24b;
+  --brass-bright: #e0bc6d;
+  --wood: #3a2417;
+  --wood-light: #4d3220;
+  --danger: #b0523f;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Work Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ivory);
+  background: radial-gradient(circle at 50% 0%, var(--felt-light), var(--felt-dark) 72%);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+button:focus-visible,
+[role="status"]:focus-visible {
+  outline: 3px solid var(--brass-bright);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
